@@ -6,7 +6,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const dayOfWeek = daysOfWeek[currentDate.getUTCDay()];
     document.querySelector('[data-testid="currentDayOfTheWeek"]').textContent = dayOfWeek;
+    const utcTimeInMilliseconds = currentDate.getTime();
+    document.querySelector('[data-testid="currentUTCTime"]').textContent = utcTimeInMilliseconds;
 
-    const localTime = currentDate.toLocaleString('en-US', { timeZone: 'Europe/Bucharest' });
-    document.querySelector('[data-testid="currentUTCTime"]').textContent = localTime;
+
+    // const localTime = currentDate.toLocaleString('en-US', { timeZone: 'Europe/Bucharest' });
+    // document.querySelector('[data-testid="currentUTCTime"]').textContent = localTime;
 });
